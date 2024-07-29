@@ -10,11 +10,11 @@ const index = () => {
   return (
     <Box style={{width:'97vw', height: '200vh'}}>
     <Sidebar />
-    <Box style={{width:'92%',height: '100%', paddingLeft: '90px'}}>
+    <Box style={{width:'92%',height: '100%', paddingLeft: '100px'}}>
       <Header />
       <DriverProvider>
           <DriverList />
-        </DriverProvider>
+      </DriverProvider>
     </Box>
   </Box>
   )

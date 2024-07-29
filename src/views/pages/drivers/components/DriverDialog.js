@@ -28,7 +28,16 @@ const { control, reset, handleSubmit, formState: { errors } } = useForm({
       setPhoneNumber(driver.phoneNumber)
       setProfilePhoto(driver.profilePhoto)
       reset(driver);
-    }
+    } else {
+        setName('');
+        setPhoneNumber('')
+        setProfilePhoto(null)
+        reset({
+          name: '',
+          phoneNumber: '',
+          profilePhoto: null,
+        });
+      }
   }, [driver]);
 
 
@@ -42,7 +51,7 @@ const onSubmit = async (data) => {
     }
 
     if (driver) {
-      await updateDriver(driver.id, driver.profilePhoto, formData);
+      await updateDriver(driver.id, formData);
     } else {
       await addDriver(formData);
     }

@@ -14,6 +14,9 @@ const Sidebar = () => {
         <ListItem  component={Link} href="/vehicles">
           <ListItemText primary="Vehicles" />
         </ListItem>
+        <ListItem  component={Link} href="/transfers">
+          <ListItemText primary="Transfers" />
+        </ListItem>
       </List>
     </Drawer>
   );

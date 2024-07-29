@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6">Vehicle Management System</Typography>
+        <Typography variant="h6">Vehicle Transfer Module</Typography>
       </Toolbar>
     </AppBar>
   );

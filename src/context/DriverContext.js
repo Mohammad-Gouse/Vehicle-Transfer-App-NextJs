@@ -37,7 +37,7 @@ export const DriverProvider = ({ children }) => {
 
   };
 
-  const updateDriver = async (id,profilePhoto, driverData) => {
+  const updateDriver = async (id, driverData) => {
 
     try {
       const response = await axios.put(`${process.env.NEXT_PUBLIC_API_URL}/drivers/${id}`, driverData);
@@ -63,6 +63,8 @@ export const DriverProvider = ({ children }) => {
   };
 
   useEffect(() => {
+
+    console.log("fetch driver")
     fetchDrivers();
   }, []);
 
